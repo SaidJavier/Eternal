@@ -1,28 +1,3 @@
-const createSnowflake = () => {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-
-    snowflake.style.top = Math.random() * window.innerHeight + 'px';
-    snowflake.style.left = -10 + 'px';
-
-    const duration = Math.random() * 5 + 3;
-    snowflake.style.animationDuration = duration + 's';
-
-    const size = Math.random() * 10 + 5;
-    snowflake.style.width = size + 'px';
-    snowflake.style.height = size + 'px';
-
-    snowflake.style.opacity = Math.random() * 0.5 + 0.3;
-
-    document.body.appendChild(snowflake);
-
-    setTimeout(() => {
-        snowflake.remove();
-    }, duration * 1000);
-};
-
-setInterval(createSnowflake, 200);
-
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(
         ".custom-button, .logo-button, .home-button, .help-button, .executors-button, .download-button, .credits-button"
@@ -31,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach((button) => {
         button.classList.add("animate-slide-down");
     });
-});     
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.home-button, .help-button, .executors-button, .download-button, .credits-button');
     let activeTrail = document.createElement('div');
