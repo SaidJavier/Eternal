@@ -18,7 +18,7 @@
     box-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 
-.custom-button:hover {
+.custom-button:hover {  
     transform: scale(0.95);
     border-color: #3F3F46;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
@@ -107,7 +107,7 @@ body {
 
 .search-container {
     position: absolute;
-    top: 50%;
+    top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -115,25 +115,28 @@ body {
 
 .search-container input[type="text"] {
     padding: 15px;
-    width: 500px;
+    width: 450px;
     font-size: 18px;
     border: 1px solid #d9d9d9;
     border-radius: 50px;
     outline: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
+    color: gray !important; /* Fuerza el color del texto */
+    background-color: white; /* Asegura que el fondo sea visible */
 }
 
-.search-container input[type="text"]:focus {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border-color: #4285f4; /* Azul de Google */
+.search-container input[type="text"]::placeholder {
+    color: gray !important; /* Fuerza el color del placeholder */
+    opacity: 1; /* Mantiene la visibilidad del color */
 }
+
 
 .search-container button {
     margin-left: 10px;
     padding: 15px 30px;
     font-size: 18px;
-    background-color: #4285f4; /* Azul de Google */
+    background-color: grey; /* Azul de Google */
     color: white;
     border: none;
     border-radius: 50px;
@@ -142,12 +145,12 @@ body {
 }
 
 .search-container button:hover {
-    background-color: #357ae8; /* Azul más oscuro */
+    background-color:rgb(71, 71, 71); /* Azul más oscuro */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .search-container button:active {
-    background-color: #2a65c7; /* Azul aún más oscuro */
+    background-color:#2a65c7; /* Azul aún más oscuro */
 }
 
 .home-button {
