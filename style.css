@@ -44,26 +44,6 @@ body {
     background-color: black;
 }
 
-.snowflake {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15%;
-    animation: moveRight linear infinite;
-}
-
-@keyframes moveRight {
-    0% {
-        transform: translate(0, 0);
-        opacity: 0.3;
-    }
-    100% {
-        transform: translate(100vw, 100px);
-        opacity: 0;
-    }
-}
-
 .logo-button {
     text-decoration: none;
     background-color: transparent;
@@ -122,21 +102,20 @@ body {
     outline: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
-    color: gray !important; /* Fuerza el color del texto */
-    background-color: white; /* Asegura que el fondo sea visible */
+    color: gray !important;
+    background-color: white;
 }
 
 .search-container input[type="text"]::placeholder {
-    color: gray !important; /* Fuerza el color del placeholder */
-    opacity: 1; /* Mantiene la visibilidad del color */
+    color: gray !important;
+    opacity: 1;
 }
-
 
 .search-container button {
     margin-left: 10px;
     padding: 15px 30px;
     font-size: 18px;
-    background-color: grey; /* Azul de Google */
+    background-color: grey;
     color: white;
     border: none;
     border-radius: 50px;
@@ -145,12 +124,12 @@ body {
 }
 
 .search-container button:hover {
-    background-color:rgb(71, 71, 71); /* Azul más oscuro */
+    background-color: rgb(71, 71, 71);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .search-container button:active {
-    background-color:#2a65c7; /* Azul aún más oscuro */
+    background-color: #2a65c7;
 }
 
 .home-button {
@@ -208,27 +187,7 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: absolute;
-    left: 800px;
-    top: 20px;
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-}
-
-.help-button {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    position: absolute;
-    left: 850px; /* Ajustado según lo solicitado */
+    left: 850px;
     top: 20px;
     box-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
@@ -372,9 +331,10 @@ body {
 .credits-button span {
     pointer-events: none;
 }
+
 @keyframes slideDown {
     0% {
-        transform: translateY(-150px); /* Ajusta la distancia inicial */
+        transform: translateY(-150px);
         opacity: 0;
     }
     100% {
@@ -384,8 +344,9 @@ body {
 }
 
 .animate-slide-down {
-    animation: slideDown 0.67s ease-out; /* Duración de 1 segundo para mayor fluidez */
+    animation: slideDown 0.67s ease-out;
 }
+
 /* Efecto de arrastramiento para los botones */
 .home-button::after,
 .help-button::after,
@@ -399,7 +360,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2); /* Color del rastro */
+    background-color: rgba(255, 255, 255, 0.2);
     transform: scale(0);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     z-index: -1;
@@ -410,9 +371,10 @@ body {
 .executors-button:hover::after,
 .download-button:hover::after,
 .credits-button:hover::after {
-    transform: scale(1.5); /* Tamaño del rastro al pasar el mouse */
-    opacity: 0; /* Desaparece gradualmente */
+    transform: scale(1.5);
+    opacity: 0;
 }
+
 .button-trail {
     content: '';
     position: absolute;
@@ -421,7 +383,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2); /* Color del rastro */
+    background-color: rgba(255, 255, 255, 0.2);
     transform: scale(0);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out, top 0.3s ease, left 0.3s ease;
     z-index: -1;
@@ -432,6 +394,7 @@ button.active-trail::after {
     transform: scale(1.5);
     opacity: 0;
 }
+
 .trail {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.2);
@@ -470,19 +433,3 @@ button.active-trail::after {
     border-color: white;
 }
 
-.snowflake {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    100% {
-        transform: translateX(100vw) translateY(100vh);
-    }
-}
