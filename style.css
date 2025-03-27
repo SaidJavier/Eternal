@@ -432,4 +432,42 @@ button.active-trail::after {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
     border-color: white;
 }
-
+.help-section {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top:  19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    background-color: transparent; /* Hace el cuadro completamente transparente */
+    padding: 40px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .help-title {
+    background-image: linear-gradient(to right, #ffffff, #333333); /* Degradado azul a blanco */
+    -webkit-background-clip: text; /* Aplica el degradado solo al texto */
+    background-clip: text;
+    color: transparent; /* Hace que el color del texto sea transparente para que el degradado se vea */
+    font-size: 5.54rem; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    text-align: center;
+  }
+  
+  .help-section button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(63, 63, 70, 0.8); /* Botón con fondo semi-transparente */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .help-section button:hover {
+    background-color: rgba(42, 101, 199, 0.9);
+  }
+  
