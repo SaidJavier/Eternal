@@ -26,3 +26,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona el botón de Help
+    const helpButton = document.querySelector('.help-button');
+    const helpSection = document.getElementById('help-section');
+    const closeHelpButton = document.getElementById('close-help');
+    const searchContainer = document.querySelector('.search-container');
+  
+    // Al pulsar el botón de Help
+    if (helpButton) {
+      helpButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita navegación a help.html u otra acción por defecto
+  
+        // Oculta el contenido que no sean los botones
+        if (searchContainer) {
+           searchContainer.style.display = 'none';
+        }
+        // Si tienes otros elementos (por ejemplo, algún contenido principal), también puedes ocultarlos aquí.
+        // Por ejemplo: document.querySelector('.main-content').style.display = 'none';
+  
+        // Muestra la sección de ayuda
+        helpSection.style.display = 'block';
+      });
+    }
+  
+    // Al pulsar "Volver" en la sección de ayuda
+    if (closeHelpButton) {
+      closeHelpButton.addEventListener('click', () => {
+        // Oculta la sección de ayuda
+        helpSection.style.display = 'none';
+  
+        // Vuelve a mostrar el contenido oculto (en este ejemplo, el contenedor de búsqueda)
+        if (searchContainer) {
+           searchContainer.style.display = 'block';
+        }
+        // Si ocultaste otros elementos, asegúrate de restaurarlos aquí.
+      });
+    }
+  });
+  
