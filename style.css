@@ -470,4 +470,9 @@ button.active-trail::after {
   .help-section button:hover {
     background-color: rgba(42, 101, 199, 0.9);
   }
-  
+  .help-description {
+    font-size: 17px;
+    color: rgb(156 163 175);
+    text-align: center;
+    margin-top: 10px;
+}
